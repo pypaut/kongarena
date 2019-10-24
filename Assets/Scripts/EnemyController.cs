@@ -42,4 +42,14 @@ public class EnemyController : MonoBehaviour
 
         rigidbody.MovePosition(position);
     }
+
+    void OnCollisionStay2D(Collision2D other)
+    {
+        RubyController player = other.gameObject.GetComponent<RubyController>();
+
+        if (player != null && player.health > 0)
+        {
+             player.ChangeHealth(-1);
+        }
+    }
 }
