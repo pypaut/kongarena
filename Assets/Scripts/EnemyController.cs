@@ -69,6 +69,6 @@ public class EnemyController : MonoBehaviour
     public void Fix()
     {
         broken = false;
-        rigidbody2D.simulated = false;
+        rigidbody.simulated = false;
     }
 }
